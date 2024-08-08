@@ -290,21 +290,16 @@ nav > div > button:last-child{
     margin-bottom: 2rem;
 }
 
-.extra-mile-run{
+.extra-mile-run {
     width: 366px;
     height: 312px;
-    background-color: lime;
-    overflow: hidden;
-    border-radius: 18px;
+    border-radius: 1.1rem;
     margin-right: 2rem;
-}
-
-.extra-mile-run > img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: right;
-    transform: scale(2.6) translate(-0.5rem, 2rem);
+    background-image: url('images/run.jpg');
+    background-size: 320%;
+    background-position: 70% 30%;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 
@@ -507,7 +502,6 @@ select > option{
 }
 
 .trainers{
-    height: 400px;
     background: rgb(34, 34, 34);
     padding: 1rem;
     border-radius: 1rem;
@@ -516,39 +510,64 @@ select > option{
     gap: 1rem;
 }
 
-.trainers h4{
+.trainers h4, .trainers span{
     margin: 0;
+    z-index: 1;
+}
+
+.trainers h4{
+    font-size: 1.25rem;
+}
+.trainers span{
+    font-size: 0.85rem;
+    color: rgb(255, 255, 255, 0.5)
 }
 
 /* trainer images */
 .trainers > div{
-    background-size: cover;
-    background-position: center;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding-left: 1rem;
     padding-bottom: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    height: 272px;
 }
 
-#trainer1{
+.trainers > div::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+}
+
+#trainer1::before{
     background-image: url(images/trainer1.png);
+    background-position: top;
 }
 
-#trainer2{
+#trainer2::before{
     background-image: url(images/trainer2.png);
 }
-#trainer3{
+#trainer3::before{
     background-image: url(images/trainer3.png);
+    background-position: top;
 }
-#trainer4{
+#trainer4::before{
     background-image: url(images/trainer4.png);
 }
-#trainer5{
+#trainer5::before{
     background-image: url(images/trainer5.png);
 }
-#trainer6{
+#trainer6::before{
     background-image: url(images/trainer6.png);
 }
 
