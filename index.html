@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Assignment 2</title>
         <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/24e9a73f6c.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
@@ -161,7 +162,7 @@
 
         <section class="bmi-section">
             <div class="bmi-table-container">
-                <h1 id="bmi-calc-chart">BMI Calculator Chart</h1>
+                <h1 id="bmi-calc-chart" class="title">BMI Calculator Chart</h1>
                 <table class="bmi-table">
                     <tr>
                         <th><span>BMI</span></th>
@@ -195,13 +196,23 @@
                     <input type="text" placeholder="Height/cm">
                     <input type="text" placeholder="Weight/kg">
                     <input type="text" placeholder="Age">
-                    <select name="sex" id="select-sex">
-                        <option value="male">male</option>
-                        <option value="female">female</option>
-                    </select>
-                    <select name="activity" id="activity" value="Select an Activity factor">
-                        
-                    </select>
+                    <div class="select-container">
+
+                        <select required name="sex" id="select-sex">
+                            <option value="" disabled selected hidden>Sex</option>
+                            <option value="male">male</option>
+                            <option value="female">female</option>
+                        </select>
+                    </div>
+                    <div class="select-container" id="activity">
+
+                        <select required name="activity" value="Select an Activity factor">
+                            <option value="" disabled selected hidden>Select an activity factor</option>
+                            <option value="lazy1">lazy 1</option>
+                            <option value="lazy2">lazy 2</option>
+                            <option value="therock">the rock</option>
+                        </select>
+                    </div>
                     
                 </div>
                 <div>

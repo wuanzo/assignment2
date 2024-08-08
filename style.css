@@ -402,21 +402,32 @@ nav > div > button:last-child{
 
 #bmi-calc-chart{
     margin-bottom: 3.2rem;
+    font-size: 1.8rem;
+}
+
+.bmi-table{
+    max-width: 310px;
+    width: 100%;
 }
 
 .bmi-table, .bmi-table th, .bmi-table td{
     border: 1px solid;
     border-collapse: collapse;
     font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.1);
+    text-align: left;
+    padding: 0.9rem 1rem;
 }
 
-.bmi-table td{
- 
+.bmi-table th{
+    font-size: 1rem;
+    font-weight: 500;
 }
 
-
+.bmi-table td>span{
+    color: rgb(255, 255, 255, 0.5);
+}
 
 
 .calculate{
@@ -437,16 +448,47 @@ nav > div > button:last-child{
 }
 
 .inputs > input, .inputs select{
+    width: 100%;
     padding: 0.75rem 2.5rem 0.75rem 1.25rem;
     height: 3rem;
     border: none;
-    border-radius: 8px;
+    border-radius: 0.5rem;
 	background: rgba(255, 255, 255, 0.1);
+}
+
+.inputs > input::placeholder, .inputs select:invalid{
     font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+select > option{
+    background-color: rgba(255, 255, 255, 0.1);
+    color: black;
 }
 
 #activity{
     grid-column: span 2;
+}
+
+
+.select-container{
+    position: relative;
+}
+
+.select-container select{
+    appearance: none;
+}
+
+.select-container:after{
+    content: "\f078";
+    font-family: "FontAwesome";
+    position: absolute;
+    right: 1.4rem;
+    top: 1rem;
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 
