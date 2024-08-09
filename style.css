@@ -78,9 +78,9 @@ nav{
 
 nav > h1, #fitzo{
     color: rgb(230, 83, 60);
-    font-size: 2.2rem;
+    font-size: 2.25rem;
     font-style: italic;
-    font-weight: 800;
+    font-weight: 900;
 }
 
 nav > div{
@@ -157,7 +157,7 @@ nav > div > button:last-child{
 
 .banner-sticker{
     background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(0.7rem);
+    backdrop-filter: blur(10px);
     width: 12rem;
     height: 100px;
     padding-left: 1.5rem;
@@ -254,7 +254,7 @@ nav > div > button:last-child{
 
 .card-img > img{
     border-radius: 50%;
-    border: 3px solid rgba(43, 43, 43, 0.603);
+    border: 4px solid rgba(43, 43, 43, 0.603);
 }
 
 .card-title{
@@ -325,47 +325,123 @@ nav > div > button:last-child{
 .row1{
     display: grid;
     grid-template-columns: 1fr 2fr 1.5fr;
-    height: 100%;
 }
 
 .row1 > div, .row2 > div{
-  height: 200px;
+  position: relative;
 }
 
-.training-pics img{
+.row1 > div::before, .row2 > div::before{
+    content: "";
     height: 100%;
     width: 100%;
-    object-fit: cover;
-    object-position: center;
-    opacity: 0.5;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    overflow: hidden;
+    background-repeat: no-repeat;
 }
 
 .row2{
     display: grid;
     grid-template-columns: 1.9fr 1.1fr 2fr;
-    overflow: hidden;;
-}
-
-
-/* image filters */
-#img1{
-    background-color: rgb(6, 255, 210);
-}
-
-#img2{
-    background-color: rgb(255, 0, 0);
-}
-
-#img5{
-    background-color: rgba(68, 255, 0, 0.644);
     overflow: hidden;
 }
-#img5 > img{
-    transform: scale(1.2);
+
+.row1 > div::after, .row2 > div::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-#img6{
-    background-color: rgb(0, 72, 255);
+
+.row1 span, .row2 span{
+    position: absolute;
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+
+
+/* images for trainings and exercises */
+
+#img1::before{
+    background-image: url(images/exercise1.jpg);
+}
+#img1::after{
+    background-color: rgba(6, 255, 209, 0.5);
+}
+#img1 span{
+    top: 2.65rem;
+    right: 1.5rem;
+}
+
+#img2::before{
+    background-image: url(images/exercise2.png);
+}
+#img2::after{
+    background-color: rgba(255, 0, 0, 0.3);
+}
+#img2 span{
+    top: 4.45rem;
+    right: 1rem;
+}
+
+#img3::before{
+    background-image: url(images/exercise3.png);
+}
+#img3::after{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#img3 span{
+    bottom: 0.7rem;
+    left: 10rem;
+}
+
+#img4::before{
+    background-image: url(images/exercise4.png);
+}
+#img4::after{
+    background-color: rgb(0, 0, 0, 0.5);
+}
+#img4 span{
+    top: 1.85rem;
+    left: 0.75rem;
+}
+
+#img5::before{
+    background-image: url(images/exercise5.jpg);
+}
+#img5::after{
+    background-color: rgba(66, 255, 0, 0.30);
+}
+#img5 span:first-child{
+    bottom: 3rem;
+    right: 0;
+    transform: rotate(32deg);
+}
+#img5 span:last-child{
+    font-size: 1.75rem;
+    left: 1rem;
+    top: 0.1rem;
+}
+
+#img6::before{
+    background-image: url(images/exercise6.jpg);
+    background-position: bottom;
+}
+#img6::after{
+    background-color: rgba(0, 71, 255, 0.30);
+}
+#img6 span{
+    top: 2.6rem;
+    right: 8rem;
 }
 
 
@@ -398,6 +474,7 @@ nav > div > button:last-child{
 #bmi-calc-chart{
     margin-bottom: 3.2rem;
     font-size: 1.8rem;
+    text-wrap: nowrap;
 }
 
 .bmi-table{
@@ -449,6 +526,7 @@ nav > div > button:last-child{
     border: none;
     border-radius: 0.5rem;
 	background: rgba(255, 255, 255, 0.1);
+    font-size: 1rem;
 }
 
 .inputs > input::placeholder, .inputs select:invalid{
@@ -459,8 +537,9 @@ nav > div > button:last-child{
 }
 
 select > option{
-    background-color: rgba(255, 255, 255, 0.1);
-    color: black;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
 }
 
 #activity{
