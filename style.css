@@ -18,7 +18,6 @@ body{
     margin: 0 auto;
     max-width: 1440px;
     background-color: black;
-    margin-bottom: 1000px;
 }
 
 header{ 
@@ -40,7 +39,7 @@ header > div, main{
 
 .btn-secondary{
     border-radius: 2.6rem;   
-    background: rgb(230, 83, 60);
+    background-color: rgb(230, 83, 60);
     border: none;
     font-size: 1.1rem;    
     font-weight: 600;
@@ -565,7 +564,71 @@ select > option{
     pointer-events: none;
 }
 
+/* creative section */
 
+.creative{
+    margin-bottom: 7rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#video-container{
+    border: 3px solid rgb(54,54,54);
+    overflow: hidden;
+    border-radius: 1rem;
+    height: 500px;
+    display: flex;
+    margin: 2rem 0;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+}
+
+#select-plan{
+    margin: 1rem 0;
+}
+
+.bmi-card{
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    border-radius: 8px;
+    overflow: hidden;
+    max-height: 300px;
+    cursor: pointer;
+    transition: box-shadow 0.15s ease-in;
+}
+
+.bmi-card:hover{
+    box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.4);
+}
+
+.bmi-card img{
+    width: 100%;
+    height: 100%;
+    transition: transform 0.15s ease-in;
+}
+
+.bmi-card-img-container{
+    height: 100%;
+    max-height: 150px;
+    overflow: hidden;
+}
+
+.bmi-card:hover .bmi-card-img-container img{
+    transform: scale(110%);
+}
+
+
+.bmi-card-texts{
+    padding: 0 1rem;
+}
+
+.bmi-card p{
+    text-align: left;
+}
 /* trainers */
 
 .team-text-container{
@@ -577,7 +640,7 @@ select > option{
 .team{
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 2rem;
 }
 
 .trainers{
