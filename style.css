@@ -35,6 +35,13 @@ header > div, main{
     border-radius: 2.5rem;
     padding: 0.5rem 1.3rem;
     border: none;
+    transition: background-color 0.15s ease-in,
+                color 0.15s ease-in;
+}
+
+.btn-primary:hover, .btn-secondary:hover{
+    background-color: white;
+    color: rgb(230, 83, 60);
 }
 
 .btn-secondary{
@@ -47,6 +54,7 @@ header > div, main{
     width: 224px;
     padding: 1rem 0;
     cursor: pointer;
+    transition: background-color 0.15s ease-in;
 }
 
 .title{
@@ -145,6 +153,13 @@ nav > div > button:last-child{
     background-color: transparent;
     border: 1px solid white;
     margin-left: 0.6rem;
+    transition: background-color 0.15s ease-in,
+                color 0.15s ease-in;
+}
+
+#download-btn:hover{
+    background-color: white;
+    color: black;
 }
 
 
@@ -439,7 +454,7 @@ nav > div > button:last-child{
     background-color: rgba(0, 71, 255, 0.30);
 }
 #img6 span{
-    top: 2.6rem;
+    top: 2.4rem;
     right: 8rem;
 }
 
@@ -596,7 +611,7 @@ select > option{
     border: 1px solid rgba(128, 128, 128, 0.5);
     border-radius: 8px;
     overflow: hidden;
-    max-height: 300px;
+    max-height: 320px;
     cursor: pointer;
     transition: box-shadow 0.15s ease-in;
 }
@@ -676,6 +691,7 @@ select > option{
     position: relative;
     overflow: hidden;
     height: 272px;
+    cursor: pointer;
 }
 
 .trainers > div::before{
@@ -685,15 +701,21 @@ select > option{
     opacity: 0.8;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     position: absolute;
     top: 0;
     left: 0;
     border-radius: 1rem;
+    transition: transform 0.15s ease-in;
 }
 
 #trainer1::before{
     background-image: url(images/trainer1.png);
     background-position: top;
+}
+
+.trainers > div:hover::before{
+    transform: scale(105%);
 }
 
 #trainer2::before{
@@ -726,7 +748,7 @@ select > option{
 
 .footer-content-container{
     width: 100%;
-    max-width: 1080px;
+    max-width: 1000px;
     margin-top: 3rem;
     padding-bottom: 3rem;
     display: flex;
@@ -763,6 +785,7 @@ select > option{
     list-style: none;
     color: rgba(255, 255, 255, 0.5);
     font-size: 1rem;
+    cursor: pointer;
 }
 
 
