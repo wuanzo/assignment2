@@ -32,11 +32,13 @@ body{
 header{ 
    background: linear-gradient(rgba(59, 59, 59, 0.404), rgba(128, 128, 128, 0.322), black);
    width: 100%;
+   display: flex;
+   justify-content: center;
 }
 
-header > div, main{
-    margin: 0 auto;
-    width: 90%;
+header > div{
+    width: 100%;
+    max-width: 1060px;
 }
 
 main{
@@ -506,7 +508,7 @@ nav div button:nth-child(4){
 
 .bmi-section{
     height: 100%;
-    width: 100%;
+    
     background: rgb(34, 34, 34);
     padding: 3.2rem 11rem;
     display: flex;
@@ -657,7 +659,7 @@ select > option{
     cursor: pointer;
     transition: box-shadow 0.15s ease-in;
     max-width: 240px;
-
+    min-width: 230px;
 }
 
 .bmi-card:hover{
@@ -887,7 +889,7 @@ select > option{
 
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 576px) and (max-width: 992px) {
     
     
     header{
