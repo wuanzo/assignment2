@@ -36,6 +36,10 @@ header{
    justify-content: center;
 }
 
+#hamburger-menu{
+    display: none;
+}
+
 header > div{
     width: 100%;
     max-width: 1060px;
@@ -101,7 +105,6 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: rem;
 }
 
 nav h1, #fitzo{
@@ -111,6 +114,7 @@ nav h1, #fitzo{
     font-weight: 900;
 }
 
+
 nav div:last-child{
     display: flex;
     align-items: center;
@@ -118,10 +122,6 @@ nav div:last-child{
     gap: 3rem;
     border: 1px solid rgba(128, 128, 128, 0.295);
     border-radius: 2.5rem;
-}
-
-#hamburger-menu{
-    display: none;
 }
 
 nav div button{
@@ -149,6 +149,11 @@ nav div button:nth-child(4){
     margin-right: 5.5rem;
 }
 
+.banner-texts > div:last-child{
+    display: flex;
+    gap: 0.88rem;
+}
+
 .banner-texts  h1{
     font-size: 5rem;
     font-weight: 900;
@@ -164,17 +169,16 @@ nav div button:nth-child(4){
 }
 
 .banner-texts  p{
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.5rem;
     color: rgba(255, 255, 255, 0.5);
-    margin: 2rem 0;
+    margin: 1.75rem 0;
 }
 
 #download-btn{
     background-color: transparent;
     border: 1px solid white;
-    margin-left: 0.6rem;
     transition: background-color 0.15s ease-in,
                 color 0.15s ease-in;
 }
@@ -223,7 +227,6 @@ nav div button:nth-child(4){
     bottom: 4rem;
     left: -7.2rem;
     display: flex;
-    display: flex;
     gap: 0.75rem;
     align-items: center;;
     width: 208px;
@@ -243,8 +246,8 @@ nav div button:nth-child(4){
 }
 
 #live{
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     background-color: rgb(230, 83, 60);
     border-radius: 50%;
 }
@@ -280,6 +283,7 @@ nav div button:nth-child(4){
 }
 
 .card{
+    width: 100%;
     max-width: 230px;
     display: flex;
     flex-direction: column;
@@ -289,6 +293,7 @@ nav div button:nth-child(4){
 }
 
 .card-img > img{
+    width: 100%;
     border-radius: 50%;
     border: 4px solid rgba(43, 43, 43, 0.603);
 }
@@ -313,6 +318,7 @@ nav div button:nth-child(4){
 }
 
 .extra-mile{
+    height: 100%;
     width: 100%;
     max-width: 1060px;
     background: rgb(34, 34, 34);
@@ -376,10 +382,12 @@ nav div button:nth-child(4){
 .row1{
     display: grid;
     grid-template-columns: 1fr 2fr 1.5fr;
+    overflow: hidden;
 }
 
 .row1 > div, .row2 > div{
   position: relative;
+  overflow: hidden;
 }
 
 .row1 > div::before, .row2 > div::before{
@@ -520,7 +528,7 @@ nav div button:nth-child(4){
 
 #bmi-calc-chart{
     margin-bottom: 3.2rem;
-    font-size: 1.8rem;
+    font-size: 1.75rem;
     text-wrap: nowrap;
 }
 
@@ -550,6 +558,7 @@ nav div button:nth-child(4){
 
 
 .calculate{
+    width: 100%;
     max-width: 577px;
     display: flex;
     flex-direction: column;
@@ -864,48 +873,233 @@ select > option{
 /* small device */
 
 @media (max-width: 576px) {
-
-
-    nav > div{
+    
+    nav, .banner, header > div, .banner-texts > div:last-child{
+        width: 100%;
+        max-width: 353px;
+    }
+    .title, .get-started h1{
+        font-size: 2rem;
+    }
+    
+    nav > div:last-child button{
         display: none;
     }
-    #hamburger-menu{
-        display: inline-block;
+    nav > div:last-child #hamburger-menu{
+        display: inline;
+    }
+    nav > div:last-child{
+        border: none;
+    }
+    nav h1{
+        margin: 0;
+    }
+    nav{
+        margin: 3.25rem 0;
     }
 
-    .banner,
-    .habit-cards,
-    .extra-mile,
-    .trainers
-    {
+
+    
+    .banner-texts h1, .banner-texts #shape{
+       font-size: 2.25rem;
+    }
+    .banner-texts{
+        margin: 0;
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .banner-texts button{
+        width: 170px;
+    }
+    .banner-texts > div:first-child{
+        max-width: 285px;
+    }
+    .banner-texts > div:first-child p{
+        max-width: 260px;
+    }
+    .banner-texts h1{
+        line-height: 120%;
+    }
+    
+    .banner{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .banner-texts #shape{
+        font-size: 4.5rem;
+    }
+    .banner-sticker{
+        width: 9.1rem;
+        height: 4.7rem;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+
+        top: 2.7rem;
+        right: 0.8rem;
+    }
+    .banner-sticker h1{
+        font-size: 1.9rem;
+        margin: 0;
+    }
+    .banner-sticker > span{
+        font-size: 0.6rem;
+    }
+    .sticker2{
+        top: auto;
+        right: auto;
+        bottom: 15rem;
+        left: 0.5rem;
+        flex-direction: row;
+        gap: 0.75rem;
         align-items: center;
+        padding-left: 0;
+        width: 155px;
+        height: 72px;
+    }
+    .sticker2 > div > h1{
+        font-size: 1.1rem;
+        margin: 0;
+    }
+    .sticker2 > div > span{
+        font-size: 0.75rem;
+        line-height: 0;
+    }
+    #live{
+        width: 1.9rem;
+        height: 1.9rem;
+    }
+    
+    .habit-cards,
+    .extra-mile > div
+    {
+       flex-direction: column;
+       align-items: center;
     }
 
-    .banner h1{
-        max-width: 576px;
+    .habits-section{
+        margin: 4rem 0;
+    }
+    
+    .extra-mile > div{
+        gap: 2rem;
+    }
+    .extra-mile .extra-mile-run{
+        height: 170px;
+        max-width: 287px;
+        background-size: 135%;
+        background-position: 75% 0;
+    }
+    .extra-mile-text button{
+        width: 100%;
+    }
+    .extra-mile-text > .description{
+        margin-bottom: 1.5rem;
+    }
+    
+    .trainings{
+        gap: 2.4rem;
+    }
+    .training-pics{
+        max-height: 253px;
+    }
+
+    .row1{
+        grid-template-columns: 1fr 1fr;
+    }
+    .row2{
+        grid-template-columns: 0.8fr 1fr;
+    }
+    .row1 > #img3, .row2 > #img6{
+        display: none;
+    }
+    #img2::before{
+        transform: scale(2.2) translate(-20%, 12%);
+    }
+    #img4::before{
+        transform: scale(1.6) translate(8%, 20%);
+    }
+    #img5::before{
+        transform: scale(1.3) translate(-10%);
+    }
+    
+    .bmi-text{
+        margin: 4rem 0 2rem 0;
+    }
+
+    .bmi-section{
+        gap: 2.5rem;
+        flex-direction: column;
+        padding: 2.5rem 1.25rem;
+    }
+
+    #bmi-calc-chart, .bmi-section h1{
+        font-size: 1rem;
+        margin: 0;
+    }
+    #bmi-calc-chart{
+        margin-bottom: 1.5rem;
+    }
+    
+    .bmi-section, .creative{
+        margin-bottom: 5rem;
+    }
+    
+    #perfect-text{
+        margin: 1rem 0 3rem 0;
+        line-height: 3rem;
+    }
+    #video-container{
+        max-height: 200px;
+    }
+    
+    .trainers{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    main, .footer-content-container{
+        width: 100%;
+        max-width: 353px;
+    }
+    .footer-content-container{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .footer{
+        padding: 2.5rem 1.25rem 0 1.25rem;
+    }
+    .footer p{
+        max-width: 300px;
+    }
+ 
+    .get-started-container{
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+    }
+    .get-started ul > li{
+        font-size: 1.45rem;
     }
 
 }
 
-@media (min-width: 576px) and (max-width: 992px) {
+/* for tablets */
+@media (min-width: 576.1px) and (max-width: 992px) {
     
-    
-    header{
-        width: 100%;
-    }
     header > div{
         width: 95%;
     }
     nav{
+        margin: 0 2.5rem;
         margin-bottom: 4rem;
     }
     nav > div:last-child{
         gap: 1.25rem;
     }
     body{
-        max-width: 768px;
+        width: 100%;
     }
 
     .banner{
@@ -959,6 +1153,7 @@ select > option{
         padding: 2rem 0;
         gap: 4rem;
         text-align: center;
+        width: 100%;
     }
     .bmi-text{
         margin: 4.5rem 0 3rem 0;
@@ -966,8 +1161,6 @@ select > option{
     }
     .calculate{
         max-width: none;
-        padding: 0;
-        width: 100%;
         padding: 0 3rem;
     }
 
