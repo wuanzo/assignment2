@@ -377,6 +377,7 @@ nav div button:nth-child(4){
     display: grid;
     grid-template-rows: 1fr 1fr;
     overflow: hidden;
+    margin-top: 3.5rem;
 }
 
 .row1{
@@ -1006,6 +1007,7 @@ select > option{
     }
     .training-pics{
         max-height: 253px;
+        margin-top: 2.4rem;
     }
 
     .row1{
