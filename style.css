@@ -247,7 +247,14 @@ nav div button:nth-child(4){
     height: 2.5rem;
     background-color: rgb(230, 83, 60);
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+#live img{
+    margin-left: 10%;
+}
+
 
 /* habits section */
 .habits-section{
