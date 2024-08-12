@@ -15,7 +15,6 @@ html{
     display: flex;
     justify-content: center;
     padding: 0;
-    margin-bottom: 1000px;
 }
 
 body{
@@ -95,8 +94,6 @@ main{
     letter-spacing: 0.3px;
     color: rgba(255, 255, 255, 0.5);
 }
-
-
 
 
 /* nav styles */
@@ -251,10 +248,6 @@ nav div button:nth-child(4){
     background-color: rgb(230, 83, 60);
     border-radius: 50%;
 }
-
-
-
-/* main styles */
 
 /* habits section */
 .habits-section{
@@ -533,8 +526,7 @@ nav div button:nth-child(4){
 }
 
 .bmi-table{
-    max-width: 310px;
-    width: 100%;
+    width: 310px;
 }
 
 .bmi-table, .bmi-table th, .bmi-table td{
@@ -731,7 +723,7 @@ select > option{
     border-radius: 1rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
 .trainers h4, .trainers span{
@@ -837,7 +829,7 @@ select > option{
 }
 
 .footer p{
-    line-height: 1.4rem;
+    line-height: 1.5rem;
     font-size: 0.82rem;
     max-width: 400px;
 }
@@ -986,9 +978,12 @@ select > option{
     }
     .extra-mile .extra-mile-run{
         height: 170px;
-        max-width: 287px;
         background-size: 135%;
         background-position: 75% 0;
+    }
+    .extra-mile{
+        padding: 2rem;
+        width: 100%;
     }
     .extra-mile-text button{
         width: 100%;
@@ -1065,7 +1060,7 @@ select > option{
     }
     .footer-content-container{
         flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
     }
     .footer{
         padding: 2.5rem 1.25rem 0 1.25rem;
@@ -1076,8 +1071,14 @@ select > option{
  
     .get-started-container{
         flex-direction: column;
-        gap: 20px;
+        gap: 2rem;
         padding: 0;
+    }
+    .get-started ul{
+        margin: 0;
+    }
+    .get-started h1{
+        margin-bottom: 2.45rem;
     }
     .get-started ul > li{
         font-size: 1.45rem;
