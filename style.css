@@ -818,6 +818,7 @@ select > option{
 
 .get-started-container{
     display: flex;
+    align-items: center;
 }
 .get-started:first-child{
     margin-right: 9.5rem;
@@ -839,6 +840,7 @@ select > option{
     font-size: 1.5rem;
     font-weight: 600;
     margin: 0;
+    text-wrap: nowrap;
 }
 
 .get-started ul{
@@ -1073,6 +1075,7 @@ select > option{
         flex-direction: column;
         gap: 2rem;
         padding: 0;
+        align-items: flex-start;
     }
     .get-started ul{
         margin: 0;
